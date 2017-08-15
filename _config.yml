@@ -1,12 +1,12 @@
 # Setup
-title:        Project or Site name
-tagline:      A responsive theme for your project on GitHub Pages
+title:        Good Itea
+tagline:      Created by Jihwan ma 2017-08-15
 baseurl:
 paginate:     1
 
 # About/contact
 author:
-  name:       Author name
+  name:       JiHwan Ma
   url:        http://yourhomepage.com 
 
 # Gems
