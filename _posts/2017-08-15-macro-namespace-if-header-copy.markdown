@@ -12,9 +12,9 @@ categories: C++
 
 
 
-#C++ 
+# C++ 
 
-##매크로함수란?
+## 매크로함수란?
 
 ~~~~~~~ruby
 장점.일반 함수에 비해서 실행 속도가 빠르다.
@@ -35,7 +35,7 @@ inline int SQ(int x){return x*x;}
 같은 이름을 갖는 함수여도 namespace가 다르면 다른 함수로 인식.
 ```
 
-##if,ifdef,ifndef,endif
+## if,ifdef,ifndef,endif
 
 ~~~~~ruby
 #if()   괄호 안이 참이면 내용 실행
@@ -49,7 +49,7 @@ inline int SQ(int x){return x*x;}
 #endif
 ~~~~~
 
-##헤더파일
+## 헤더파일
 ~~~~~~
 파일을 나누어서 각각의 용도 및 특성 별로 함수, 변수를 나누어서 저장하는데 쓰임. =>관리가 용이함.
 단, 분할 시 컴파일러는 파일단위로 컴파일하기때문에 선언&정의의 위치를 컴파일러에게 알려주어야 함.
@@ -64,7 +64,7 @@ ex) extern int num;
 이 위치에 ~h에 저장된 내용을 그대로 가져다 놓는것.
 ~~~
 
-##Const
+## Const
 
 ~~~
 const int num=10; num에 10이 할당되며 변경 x.. const는 선언과 동시에 초기화 시켜주어야함.

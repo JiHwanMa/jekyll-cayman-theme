@@ -5,9 +5,9 @@ date:   2017-08-15 20:00:00
 categories: C++
 ---
 
-#C++ 
+# C++ 
 
-##참조자
+## 참조자
 ~~~
 변수: 할당된 메모리 공간에 붙여진 이름이며 그 이름을 동해 해당 메모리 공간에 접근 가능.
 이때 하나의 메모리공간에 둘 이상의 이름을 부여하는 것이 참조자이다.
@@ -17,7 +17,7 @@ int *ptr=&num; ptr이 num을 가리킴.
 int &ref=num; num에 ref라는 또다른 이름 선언.
 주의사항) 참조자는 선언과 동시에 항상 변수를 참조해야함.
 ~~~
-##참조자에 의한 호출
+## 참조자에 의한 호출
 
 ~~~~~ruby
 void swap(int &num1,int &num2)
@@ -28,7 +28,7 @@ num2=temp;
 }
 ~~~~~
 
-##참조자의 단점
+## 참조자의 단점
 ~~~~~~~~~~~~~~~~~ruby
 int num=24;
 func(num);
@@ -45,7 +45,7 @@ int *ptr=new int;
 int *arr=new int[3];
 ~~~
 
-##난수생성
+## 난수생성
 ~~~ruby
 #include<cstdlib>
 srand((unsigned int)time(NULL));
