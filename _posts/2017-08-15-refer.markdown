@@ -39,7 +39,7 @@ cout<<num<<endl;
 void func(const int &num);
 ~~~~~~~~~~~~~~~~~
 
-##new and delete
+## new and delete
 ~~~ruby
 int *ptr=new int;
 int *arr=new int[3];
