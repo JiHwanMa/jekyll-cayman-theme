@@ -6,7 +6,7 @@ categories: c++
 ---
 
 # 구조체(structure)란?
-~~~~~~~~~ruby
+```
 연관 있는 데이터를 묶을 수 있는 문법적 장치.
 ex)
 namespace CAR_CONST
@@ -22,7 +22,7 @@ void initCar(){ID="base";fuel=100;curspeed=0;}
 구조체 내부에 함수를 삽입함으로써 보다 확실한 구분 가능
 }
 Car Mycar={"Good",100,0};
-~~~~~~~~~
+```
  
 # 구조체->Class
 ~~~~
