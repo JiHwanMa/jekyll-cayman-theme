@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Welcome to Good ITeas!"
+title:  "Structure_and_Class"
 date:   2017-08-15 20:00:00
 categories: intro
 ---
