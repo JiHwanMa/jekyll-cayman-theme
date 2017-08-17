@@ -22,3 +22,6 @@ categories: C++
 실습코드.
 
 ![screenshot1](http://postfiles4.naver.net/MjAxNzA3MzFfMTEy/MDAxNTAxNDk3NDE4Mjk5.9K_02O7-qn9YGe8yyW8wQ4n4Zz904nwCtaFWbqUb4YQg.awHXDap4Msli-qhdMZjIoUIzMZW1Y10wDk-G0pyfx48g.JPEG.qwq713/1.jpg?type=w2)
+![screenshot2](http://postfiles10.naver.net/MjAxNzA3MzFfOTkg/MDAxNTAxNDk3NDE4NDY3.Sj1RYeokBG1O0Ff2ycri82EWRmMQM20jcbyw-cyNAXcg.Tmax_L8af6r-BirtWvbHqZ04Xhg_0E7RirmJF0c5qUkg.JPEG.qwq713/2.jpg?type=w2)
+![screenshot3](http://postfiles13.naver.net/MjAxNzA3MzFfMjYz/MDAxNTAxNDk3NDE4NjYz.aJjJQ9J5zP4owCZ5Hw-HzmaZqLip7VxZmlnFfzO1ZWYg.WvnZfTmM15ebIFrPhEnkhHTivuuCUbpC_2fJX_r1pLIg.JPEG.qwq713/3.jpg?type=w2)
+![screenshot4](http://postfiles6.naver.net/MjAxNzA3MzFfNjcg/MDAxNTAxNDk3NDE4ODQ1.g_SPXs-AiQGth0L2Fkly8Drxr2uFi2wQju1w3xwDFIAg.6HjShLokqH-KMOAD2-9EbyaS6obXcDCYFSMFXg9LzZsg.JPEG.qwq713/4.jpg?type=w2)
