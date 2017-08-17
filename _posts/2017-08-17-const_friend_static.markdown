@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Const_Friend_Static"
+title:  "C++ Const_Friend_Static"
 date:   2017-08-17 20:49:00
 categories: c++
 ---
