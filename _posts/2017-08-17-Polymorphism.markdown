@@ -11,9 +11,9 @@ categories: C++
 Person *ptr; //포인터 변수 선언
 ptr= new Person();//포인터 변수의 객체 참조
 ```
-==Person형 포인터는 Person을 상속하는 유도 클래스의 객체도 가리킬 수 있다.==
+### Person형 포인터는 Person을 상속하는 유도 클래스의 객체도 가리킬 수 있다
 
-*Code*
+### Code
 ```c
 #include<iostream>
 using namespace std;
