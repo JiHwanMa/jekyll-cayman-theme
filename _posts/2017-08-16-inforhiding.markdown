@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Information_Hiding_and_Encapsulation"
+title:  "C++ Information_Hiding_and_Encapsulation"
 date:   2017-08-15 20:00:00
 categories: c++
 ---
