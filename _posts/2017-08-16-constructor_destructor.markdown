@@ -20,8 +20,5 @@ categories: C++
 특징3. : 매개변수는 void 형으로 선언되어야 하기 때문에 오버로딩,디폴트 값 설정이 둘다 불가하다.
 ~~~
 실습코드.
-~~~c
-#include<iostream>
-#include<cstdlib>
-using namespace std;
-~~~
+
+![screenshot1](http://postfiles4.naver.net/MjAxNzA3MzFfMTEy/MDAxNTAxNDk3NDE4Mjk5.9K_02O7-qn9YGe8yyW8wQ4n4Zz904nwCtaFWbqUb4YQg.awHXDap4Msli-qhdMZjIoUIzMZW1Y10wDk-G0pyfx48g.JPEG.qwq713/1.jpg?type=w2)
