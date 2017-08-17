@@ -24,7 +24,7 @@ int Func(int a, int b)
 
  return a + b;
 
- 함수 오버로딩의 잘못된 예.
+ //함수 오버로딩의 잘못된 예.
  void Func(int num) 
  cout<<"call func"<<endl;
 ~~~
