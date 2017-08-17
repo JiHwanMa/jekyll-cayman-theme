@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Constructor & Destructor"
+title:  "C++_Constructor & Destructor"
 date:   2017-08-16 20:00:00
 categories: C++
 ---
