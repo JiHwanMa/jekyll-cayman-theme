@@ -16,7 +16,7 @@ C++은 함수의 이름만을 이용하여 호출함수를 찾는 C언어와 달
 단 함수 오버로딩은 매개변수는 바꾸어 구현하지만 반환형은 일치하여야 한다.  
 `
 
-~~~c
+```c
 int Func(int num) 
  num++;
  return num;
@@ -27,4 +27,4 @@ int Func(int a, int b)
  //함수 오버로딩의 잘못된 예.
  void Func(int num) 
  cout<<"call func"<<endl;
-~~~
+```
