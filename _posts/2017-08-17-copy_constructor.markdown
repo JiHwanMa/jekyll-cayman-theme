@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "copy_constructor"
+title:  "C++ copy_constructor"
 date:   2017-08-17 20:50:00
 categories: c++
 ---
