@@ -2,7 +2,7 @@
 layout: default
 title:  "this_pointer"
 date:   2017-08-17 20:49:00
-categories: intro
+categories: c++
 ---
 
 ## this 포인터?
