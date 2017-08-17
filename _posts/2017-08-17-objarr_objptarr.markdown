@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "object_arr"
+title:  "C++ object_arr"
 date:   2017-08-17 20:45:00
 categories: C++
 ---
