@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "this_pointer"
+title:  "C++ this_pointer"
 date:   2017-08-17 20:49:00
 categories: c++
 ---
