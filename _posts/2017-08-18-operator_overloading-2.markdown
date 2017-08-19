@@ -40,6 +40,7 @@ public:
 	{
 		xpos++; ypos++;
 		return *this; //this는 객체자신의 포인터 값을 의미하므로, *this는 객체자신을 의미한다.
+	//*this를 Reference를 이용해서 반환해야 ++(++pos)같은 연산이 가능!!
 	}
 	friend Point& operator--(Point &pos);	
 };
