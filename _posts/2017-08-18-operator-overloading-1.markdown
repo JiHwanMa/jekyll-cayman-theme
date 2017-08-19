@@ -7,6 +7,10 @@ categories: C++
 
 ## 연산자 오버로딩
 
+```
+p1+p2  p1을  기준으로 operator+를 호출
+p1.operator+(p2)
+```
 ~~~
 'operator' (Keyword) + 'operator(+,-,*,/...)'
 ex] operator+
