@@ -74,3 +74,20 @@ Point& operator--(Point &pos)
 }
 
 ```
+## 교환법칙 성립하게하는 오버로딩
+
+### Code
+```c
+Point operator*(int times,Point& ref)
+{
+	Point pos(re.xpos*times,ref.ypos*times);
+    return pos;
+    //pos*3
+}
+
+Point operator*(Point& ref,int times)
+{
+return ref*times;
+// 3*pos를 pos*3의 형태로 바꾸는 방식
+}
+```
