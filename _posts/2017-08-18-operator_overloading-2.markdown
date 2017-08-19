@@ -20,6 +20,28 @@ pos++;
 			operator++(pos,int); 전역함수로 오버로딩
 
 ```
+### 후위증가 Code
+```c
+const Point operator++(int)
+{
+	const Point retobj(xpos,ypos);
+    xpos+=1;
+    ypos+=1;
+    return retobj;
+}
+
+const Point operator--(Point &ref,int)
+{
+	const Point retobj(ref);
+	ref.xpos-=1;
+	ref.ypos-=1;
+	return retobj;
+}
+
+code를 보면 우선 증가하기 이전의 값을 복사해 놓은 후
+객체의 값을 증가시키고 마지막으로 복사해 놓은 값을 리턴해줌으로써
+후위증가의 효과를 내는 것을 알 수 있다.
+```
 ### Code
 ```c
 #include<iostream>
