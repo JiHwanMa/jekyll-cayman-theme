@@ -8,14 +8,15 @@ categories: C++
 ## 단항 연산자의 오버로딩
 
 ```
-증가, 감소 연산자의 오버로딩
 전위
 			pos.operator++(); 멤버함수로 오버로딩
 ++pos;
 			operator++(pos); 전역함수로 오버로딩
-
+```
+```
+후위(int)
 			pos.operator++(int); 멤버함수로 오버로딩
-pos++;  후위일 경우 인자로 int
+pos++; 
 			operator++(pos,int); 전역함수로 오버로딩
 
 ```
