@@ -13,6 +13,12 @@ int num(10); C++ style
 예를 들어
 ![sc1](http://postfiles8.naver.net/MjAxNzA4MDFfMjU5/MDAxNTAxNTczMDc0MzUy.xFUWrNdmr7L6zYgQqUmMxEkMmVEaxdGay6tLyzUJhvMg.fPVdQG7Q2mOUQpYVbSlTr6HXMMZ73hgYXEIQjo_4gPAg.JPEG.qwq713/%EB%B3%B5%EC%82%AC%EC%83%9D%EC%84%B1%EC%9E%90.jpg?type=w2)
 ~~~
+
+```c
+Sosimple(Sosimple &copy);
+//이런식으로 복사 생성자 정의해줄 것
+```
+
 SoSimple sim1(1,2);
 SoSimple sim2(sim1);을 컴파일하게 되면, sim2라는 객체가 생성됨과 동시에 해당 멤버변수값으로 
 sim1의 해당 멤버변수값과 같은 값이 복사된다.
@@ -24,6 +30,7 @@ sim1의 해당 멤버변수값과 같은 값이 복사된다.
 왜냐하면 기본적으로 SoSimple(SoSimple &copy):num1(copy.num1),num2(copy.num2){}라는 비어있는 
 디폴트 복사 생성자가 정의되어있기 때문이다.
 ~~~
+
 ## 변환에 의한 초기화(explicit으로 예방가능.)
 ```c
 Sosimple sim2=sim1; //이런식으로 초기화하여도 자동으로 이 코드는 
@@ -38,6 +45,7 @@ Sosimple sim2(sim1);//과 같이 변환되어서 초기화된다. 이를 방지�
 객체가 가리키게 된다.(얕은 복사) 따라서 복사 생성자가 새로운 메모리를 할당할 수 있도록 위처럼
 코드를 작성해주어야한다.(깊은 복사)
 ~~~
+
 ## 복사 생성자가 호출되는 3가지 시점.
 ~~~
 1. 기존에 생성된 객체를 이용해서 새로운 객체를 초기화하는 경우.
