@@ -13,6 +13,28 @@ categories: C++
 ->객체 생성 시 딱 1회만 호출됨.
 ->오버로딩, 디폴트값 설정 가능.
 ~~~
+
+## 생성자 구분
+
+```c
+class Simple
+{
+	private:
+    	int num;
+    public:
+    	Simple()//1
+        {
+        num=1;
+        }
+        Simple(int n=10):num(n)//2
+        {}
+}
+
+Simple s;//1
+Simple s();//2
+
+구분할것!!!
+```
 ## 소멸자란?
 ~~~
 특징1. : 클래스의 이름 앞에 ~가 붙은 형태.
