@@ -39,3 +39,28 @@ int main(void)
 	return 0;
 }
 ```
+
+## 클래스 템플릿의 선언과 정의의 분리
+
+클래스 템플릿도 멤버함수를 **클래스 외부에 정의**하는 것이 가능하다. 
+예를 들어서 다음과 같이 정의된 클래스 템플릿이 있다면 아래와 같이 정의하자.
+
+```c
+template<typename T>
+class SimpleTemplate
+{
+public:
+	T SimpleFunc(const T& ref);
+}
+
+//외부에 정의
+template<typename T>
+T SimpleTemplate<T>::SimpleFunc(const T& ref){}
+
+```
+
+```
+단 파일을 나눌 때는 cpp,h모두를 메인함수에 넣어주어야된다.
+왜냐하면 템플릿함수는 컴파일러가 함수 템플릿을 이용하여 파일 단위로 생성하기 때문에
+~.h만으로는 생성이 불가하다. 따라서 둘 다 포함시켜줄 것!!!
+```
