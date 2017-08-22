@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "C++ Template_Ex1"
+title:  "C++ Template_Ex1 & Specialization"
 date:   2017-08-22 14:21:00
 categories: C++
 ---
