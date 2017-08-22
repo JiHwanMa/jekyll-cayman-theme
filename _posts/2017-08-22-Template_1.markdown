@@ -1,0 +1,79 @@
+---
+layout: default
+title:  "C++ Template_Basic"
+date:   2017-08-22 13:48:00
+categories: C++
+---
+
+
+## Function Template?
+**Code**
+```c
+template<typename T>
+T Add(T num1,T num2)
+{return num1+num2;}
+```
+~~~
+템플릿을 사용하면 자료형에 의존적이지 않은 함수를 생성할 수 있으며
+위의 코드는 함수 템플릿으로써 함수를 만드는 도구가 된다.
+~~~
+
+### Template Function
+
+**템플릿 함수**란 위의 함수 템플릿(모형자)를 이용하여 생성한 함수를 의미한다.
+
+#### 예제코드
+```c
+#include<iostream>
+using namespace std;
+
+template<typename T>
+T Add(T num1, T num2)
+{
+	return num1 + num2;
+}
+
+//자료형이 아직 정해지지 않은 Add Function
+
+int main() 
+{
+	cout << Add<int>(15, 20) << endl; //<1> T를 int로 해서 만들어진 Add함수를 호출한다.
+	cout << Add<double>(2.9,3.7) << endl;
+	cout << Add<int>(3.2,3.2) << endl; //실행결과 6
+	cout << Add<int>(3.14,2.75) << endl; //실행결과 5
+	return 0;
+}
+```
+```
+컴파일러는 <1>함수를 보자마자
+int Add<int>(int num1,int num2){return num1+num2;}라는 템플릿 함수를 생성하여 호출한다.
+이후에 <1>같은 형태의 함수가 필요하면 바로 호출한다.
+나머지 함수의 호출도 위와 같은 형태로 생성 및 호출된다.(이때 생성된 함수를 템플릿 함수라고 한다.)
+일반함수와의 차이는 템플릿 함수는 컴파일러에 의해서 생성된 함수라는 것.
+```
+
+## 둘 이상의 형(Type)에 대해 템플릿 선언하기
+```
+템플릿도 여러개 정의할 수 있다. 다만 함수 템플릿 생성 시 바로 위에 선언한 템플릿형은
+바로 밑의 함수 하나까지만 적용된다. 따라서 주의할 것.
+```
+```c
+#include<iostream>
+using namespace std;
+
+template<typename T1,typename T2>
+void Showdata(double num) 
+{
+	cout << (T1)num <<", "<< (T2)num << endl;
+}
+
+int main(void) 
+{
+	Showdata<char, int>(65);
+	Showdata<char, int>(67);
+	Showdata<char, double>(68.9);
+	Showdata<short, double>(69.2);
+	return 0;
+}
+```
+
