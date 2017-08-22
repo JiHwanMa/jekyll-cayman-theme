@@ -71,6 +71,11 @@ T SumArray(T arr[], int len)
 아래는 예제코드 이다.
 ```
 
+```
+const char* Or char* type 함수에 대해 따로 정의하였으니, 해당 함수가 필요하면
+아래에 정의된 함수를 사용.
+```
+
 ```c
 #include<iostream>
 #include<cstring>
