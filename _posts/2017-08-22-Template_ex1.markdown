@@ -43,3 +43,23 @@ int main(void)
 	return 0;
 }
 ```
+
+## 문제2
+
+```
+배열의 합을 구하는 Sumarray라는 함수를 템플릿을 이용하여 정의해보자.
+```
+```c
+#include<iostream>
+using namespace std;
+template<typename T>
+T SumArray(T arr[], int len) 
+{
+	T sum = 0;
+	for (int i = 0; i < len; i++) 
+	{
+		sum += arr[i];
+	}
+	return sum;
+}
+```
