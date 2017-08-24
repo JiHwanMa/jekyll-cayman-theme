@@ -6,12 +6,6 @@ categories: C++
 ---
 
 ## C++에서의 형 변환
-**
-1.dynamic_cast
-2.static_cast
-3.const_cast
-4.reinterpret_cast
-**
 
 ### dynamic_cast
 ```
