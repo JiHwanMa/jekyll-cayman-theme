@@ -11,4 +11,11 @@ title: {{ site.name }}
     {% endfor %}
   </ul>
   
+   <h1>Blog Posts2</h1>
+  <ul class="posts2">
+    {% for post in site.posts2 %}
+      <li><span>{{ post2.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post2.url }}">{{ post2.title }}</a></li>
+    {% endfor %}
+  </ul>
+  
 </div>
