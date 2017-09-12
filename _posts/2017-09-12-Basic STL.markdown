@@ -1,0 +1,38 @@
+---
+layout: default
+title:  "Basic STL Function"
+date:   2017-09-12 21:00:00
+categories: Topcoder
+---
+
+
+# For Kakao coding Test
+
+```c
+sort(array);//정렬
+string s="def"+"abcghi";
+s=s.substr(3,3);// 문자열잘라내기"abc" idx3부터 3개
+```
+
+## C++ map class
+
+```c
+//hash table
+#include<iostream>
+#include<map>
+using namespace std;
+
+int main(void) 
+{	//map<key_type,data_type,[comparision_function]>
+	map<string, char> grade_list;
+	grade_list["John"] = 'B';
+	grade_list["Tom"] = 'A';
+	grade_list.erase("John");//key value
+	//.size() .empty() .clear()
+
+//find 함수
+	cout<<grade_list.begin()->first << endl;
+	cout << grade_list.begin()->second << endl;
+
+}
+```
