@@ -1,0 +1,47 @@
+---layout: defaulttitle:  "sql"date:   2017-12-06 20:00:00categories: sql---
+## sql```sql-----------------12월 6일 sql문-------------- //설명-----------------------------------
+select count(*) from emp;         //12
+select count(empno) from emp;     //12 null 이 없으므로
+select count(mgr) from emp;       //11 null(king의 mgr이 null) 
+select count(comm) from emp;      //4 - comm이 null이 아닌 사원의 수
+select sum(sal) from emp;         //총 직원급여
+select sum(sal) from emp where deptno=10;  //10번 부서에 해당하는 직원의 급여합.
+select sum(sal)/count(empno) from emp;      //급여평균
+select  sum(sal) as sum,avg(sal) as avg,  min(sal) as min,max(sal) as maxfrom  emp;                    //합계 평균 최소 최대 급여 보기
+select job from emp;       //12개의 직업
+select distinct job from emp;     //5개의 직업(중복제거)
+select distinct job from emp;     //5(중복x 직업의 갯수)
+select avg(sal) from emp;     //전체 부서의 평균급여select avg(sal) from emp where deptno=10; //10번 부서의 평균급여select avg(sal) from emp where deptno=20; //20번 부서의 평균급여select avg(sal) from emp where deptno=30; //30번 부서의 평균급여select avg(sal) from emp where deptno=40; //40번 부서의 평균급여
+           //이 작업을 Group by 를 이용하여             //깔끔하게 처리할 수 있음
+select deptno,round(avg(sal),'1') from emp group by deptno;       // deptno 별로 평균 급여를 계산해서           // 소수점 첫째자리까지 출력해주세요.
+select ename,round(avg(sal),0)from emp;         //error - row의 갯수가 맞지 않음..           //ename- 여러개 avg - 1개.                         select round(avg(sal),0)     //group by에 참여한 column은from empgroup by dept;           select deptno,round(avg(sal),0)    //select column에 포함될 수 있음!from empgroup by dept;
+*********************Group by 절은 내부에서 정렬이 이루어진 후 그룹화*********************
+
+select e.deptno,d.dname,round(avg(sal),0) as average from emp e,dept dwhere e.deptno=d.deptnogroup by e.deptno,d.dname;     //group by 사용 시 해당 sql문의 select문에는           //group by 에 참여한 column만 올 수 있음..            //따라서 강제로 d.dname 넣어서 실행시킨 것.         select e.deptno,d.dname,round(avg(sal),1) as averagefrom emp e,dept dwhere e.deptno=d.deptno group by e.deptno,d.dnamehaving avg(sal)>2000;      //having 절은 where이후에 사용하며           //group by ? 집계함수 ? 에 대해서 조건은           //where가 아닌 having으로 처리 !
+순서
+1.FROM   JOIN을 통해서 큰 테이블을 만든다.
+2.WHERE   테이블로부터 한 ROW씩 읽어 조건을 만족하는 결과만 뽑는다.
+3.GROUP BY  원하는 그룹별로 행들을 GROUPING 한다.
+4.HAVING  원하는 조건을 만족하는 그룹만 남긴다.
+5.ORDER BY  주어진 조건에 따라 정렬 한다.
+6.SELECT  원하는 결과만 PROJECTION 한다.
+-HAVING 절에는 GROUP BY 에 참여한 컬럼이나 AGGREGATE 함수만 사용가능!!-HAVING 절은 WHERE 절 이후에 사용할 것. HAVING 절에도 필요하면 AND 조건 가능.
+#직책이 'Clerk' 아닌 사원에 대한 부서별 급여 합계
+SELECT deptno,SUM(sal) as sumFROM emp WHERE job not in ('Clerk')GROUP BY deptnoHAVING sum(sal)> 6000ORDER BY 2;
+#직종별 최고급여를 급여가 많은 직종 부터 출력
+SELECT job,max(sal) as 최고급여FROM  empGROUP BY jobORDER BY 2 asc;
+#월별 입사자수
+select to_char(hiredate,'mm')||'월' as 월 ,count(hiredate)||'명' as 사원수from empgroup by to_char(hiredate,'mm')order by 월
+#FORD보다 급여 많이 받는사람의 목록select salfrom emp where ename='FORD';        //3000     <1>
+select *from empwhere sal>3000;         //query    <2>
+select *from empwhere sal>(select salfrom emp where ename='FORD');       //<1>+<2> by subquery
+select *from empwhere sal>(select avg(sal)from emp);
+select min(sal) as mins from emp group by deptno;
+select *from empwhere sal=950;
+select *from empwhere sal=(select min(sal) mins from emp group by deptno);            // error 우측 항이 여러개임..            // =을 사용할 수 없음.            // 이때는 in으로 대체!!            select *from empwhere sal in (select min(sal) mins from emp group by deptno);
+            //최저급여 찾은다음에. 그 최저            //급여에 해당하는 사람들을 찾기!!!            //by subquery            // join 대신 subquery 사용가능!!            SELECT ENAME,SAL,DEPTNOFROM EMP outerWHERE sal>( select avg(sal)   from emp   where deptno=outer.deptno);               //꼭 알기 !!!!!!!!!!!!!!                        ##사원들중 급여 가장 많이 받는 사원 3명.
+select rownum,ename,salfrom emporder by sal desc;            //sal에따라 정렬된 테이블이 아님...ㅠ            select rownum,ename,sal from (select * from emp order by sal)where rownum<4;         //해당 테이블을 순서만 정렬해줌.
+#각 부서별로 최고급여를 받는 사원을 출력하시오
+SELECT deptno,empno,ename,salFROM empWHERE (deptno,sal) IN (SELECT deptno,max(sal)      FROM emp      GROUP BY deptno);
+
+```
