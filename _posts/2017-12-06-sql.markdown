@@ -1,9 +1,9 @@
-------
+---
 layout: default
 title:  "sql 2017 12 06"
 date:   2017-12-06 20:00:00
 categories: sql
-------
+---
 
 
 ```sql
