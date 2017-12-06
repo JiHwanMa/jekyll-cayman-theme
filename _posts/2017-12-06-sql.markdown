@@ -1,5 +1,11 @@
----layout: defaulttitle:  "sql"date:   2017-12-06 20:00:00categories: sql---
-## sql```sql-----------------12월 6일 sql문-------------- //설명-----------------------------------
+---
+layout: defaulttitle:  "sql"
+date:   2017-12-06 20:00:00
+categories: sql
+---
+## sql
+```sql
+-----------------12월 6일 sql문-------------- //설명-----------------------------------
 select count(*) from emp;         //12
 select count(empno) from emp;     //12 null 이 없으므로
 select count(mgr) from emp;       //11 null(king의 mgr이 null) 
