@@ -5,7 +5,7 @@ date:   2017-12-06 20:00:00
 categories: sql
 ---
 
-
+~~~
 ```sql
 -----------------12월 6일 sql문-------------- //설명-----------------------------------
 select count(*) from emp;         //12
@@ -53,3 +53,4 @@ select rownum,ename,salfrom emporder by sal desc;            //sal�
 SELECT deptno,empno,ename,salFROM empWHERE (deptno,sal) IN (SELECT deptno,max(sal)      FROM emp      GROUP BY deptno);
 
 ```
+~~~
